@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f3f4ec">
+    <title>Rock Paper Scissors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="page-shell">
+        <header class="topbar">
+            <div class="wordmark" aria-label="Rock Paper Scissors">
+                <span class="wordmark-icon" aria-hidden="true">R<span>/</span>P<span>/</span>S</span>
+                <span class="wordmark-name">THE HAND GAME</span>
+            </div>
+            <div class="topbar-actions">
+                <span class="topbar-note">FIRST TO FIVE</span>
+                <button class="reset-button" id="reset-button" type="button" title="Reset match"
+                    aria-label="Reset match">
+                    <span class="reset-icon" aria-hidden="true">↻</span>
+                    <span>Reset</span>
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <section class="intro" aria-labelledby="page-title">
+                <div>
+                    <p class="eyebrow"><span class="eyebrow-mark"></span> QUICK MATCH <span
+                            class="eyebrow-divider">/</span> 01</p>
+                    <h1 id="page-title">Make your <span>move.</span></h1>
+                </div>
+                <div class="match-state" id="match-state" data-status="ready">
+                    <span class="state-light" aria-hidden="true"></span>
+                    <span id="match-state-text">READY WHEN YOU ARE</span>
+                </div>
+            </section>
+
+            <section class="scoreboard" aria-label="Match score">
+                <div class="score-side score-player">
+                    <div class="score-identity">
+                        <span class="score-label">PLAYER</span>
+                        <span class="score-name">You</span>
+                    </div>
+                    <strong class="score-value" id="player-score">0</strong>
+                </div>
+                <div class="score-separator" aria-hidden="true"><span>:</span></div>
+                <div class="score-side score-computer">
+                    <strong class="score-value" id="computer-score">0</strong>
+                    <div class="score-identity">
+                        <span class="score-label">OPPONENT</span>
+                        <span class="score-name">Computer</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="arena" aria-label="Last round">
+                <div class="contestant contestant-player">
+                    <span class="contestant-label"><span class="player-dot"></span> YOU</span>
+                    <div class="choice-display" id="player-choice" role="img" aria-label="No move yet">?</div>
+                    <span class="choice-caption" id="player-caption">YOUR HAND</span>
+                </div>
+                <div class="arena-center">
+                    <span class="versus-mark">VS</span>
+                    <p class="result-message" id="result" role="status" aria-live="polite">The table is yours.</p>
+                    <span class="round-count" id="round-count">ROUND 01</span>
+                </div>
+                <div class="contestant contestant-computer">
+                    <span class="contestant-label"><span class="computer-dot"></span> COMPUTER</span>
+                    <div class="choice-display" id="computer-choice" role="img" aria-label="No move yet">?</div>
+                    <span class="choice-caption" id="computer-caption">HIDDEN HAND</span>
+                </div>
+            </section>
+
+            <section class="move-section" aria-labelledby="move-title">
+                <div class="section-heading">
+                    <h2 id="move-title">Throw a hand</h2>
+                    <span class="section-index">01 — 03</span>
+                </div>
+                <div class="move-buttons" id="buttons">
+                    <button class="move-button move-rock" id="rock" data-choice="rock" type="button"
+                        aria-label="Choose rock">
+                        <span class="move-emoji" aria-hidden="true">✊</span>
+                        <span class="move-name">Rock</span>
+                        <span class="move-arrow" aria-hidden="true">↗</span>
+                    </button>
+                    <button class="move-button move-paper" id="paper" data-choice="paper" type="button"
+                        aria-label="Choose paper">
+                        <span class="move-emoji" aria-hidden="true">✋</span>
+                        <span class="move-name">Paper</span>
+                        <span class="move-arrow" aria-hidden="true">↗</span>
+                    </button>
+                    <button class="move-button move-scissors" id="scissors" data-choice="scissors" type="button"
+                        aria-label="Choose scissors">
+                        <span class="move-emoji" aria-hidden="true">✌️</span>
+                        <span class="move-name">Scissors</span>
+                        <span class="move-arrow" aria-hidden="true">↗</span>
+                    </button>
+                </div>
+            </section>
+
+            <section class="history-section" aria-labelledby="history-title">
+                <div class="section-heading history-heading">
+                    <h2 id="history-title">Round log</h2>
+                    <span class="section-index" id="history-count">NO ROUNDS YET</span>
+                </div>
+                <ol class="history-list" id="history-list" aria-live="polite">
+                    <li class="history-empty" id="history-empty">Your match history will show up here.</li>
+                </ol>
+            </section>
+        </main>
+
+        <footer class="footer-note">
+            <span>ROCK / PAPER / SCISSORS</span>
+            <span>GOOD LUCK OUT THERE <span class="footer-star" aria-hidden="true">✳</span></span>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "rock-paper-scissors",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --check script.js && node --check index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olami928/Rock-paper-scissors.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olami928/Rock-paper-scissors/issues"
+  },
+  "homepage": "https://github.com/olami928/Rock-paper-scissors#readme",
+  "description": ""
+}

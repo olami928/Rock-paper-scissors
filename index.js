@@ -25,7 +25,7 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function capitalize(word) {
-    return word.charAt[0].toUpperCase() + word.slice(1);
+    return word.charAt(0).toUpperCase() + word.slice(1);
 }
 
 
@@ -51,7 +51,7 @@ function playGame() {
     if (playerScore > computerScore) {
         console.log("You won the game!");
     } else if (computerScore > playerScore) {
-        comsole.log("The game is a tie");
+        console.log("Computer won the game!");
     }
 }
 
